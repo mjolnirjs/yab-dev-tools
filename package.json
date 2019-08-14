@@ -1,0 +1,41 @@
+{
+  "name": "template-monorepo-libs",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "template for monorepo which used to build tool/library.",
+  "main": "index.js",
+  "repository": "https://github.com/mjolnirjs/template-monorepo-libs.git",
+  "author": "Leo Hui <leohxj@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "jest --watch",
+    "clean": "lerna run clean --parallel",
+    "changelog": "lerna-changelog",
+    "build": "lerna run build",
+    "lint": "lerna run lint --parallel",
+    "test": "jest",
+    "release": "npm run test && npm run build && lerna publish"
+  },
+  "devDependencies": {
+    "@mjolnir/eslint-config": "^0.1.1",
+    "@mjolnir/tsconfig": "^0.0.2",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.3",
+    "jest": "^24.8.0",
+    "lerna": "^3.16.4",
+    "lerna-changelog": "^0.8.2",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.7.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}

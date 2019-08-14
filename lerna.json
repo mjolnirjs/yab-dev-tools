@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/lerna",
+  "version": "0.0.0",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "changelog": {
+    "repo": "mjolnirjs/template-monorepo-libs",
+    "cacheDir": ".changelog"
+  }
+}

@@ -4,7 +4,7 @@
   "useWorkspaces": true,
   "npmClient": "yarn",
   "changelog": {
-    "repo": "mjolnirjs/template-monorepo-libs",
+    "repo": "mjolnirjs/yab-dev-tools",
     "cacheDir": ".changelog"
   }
 }

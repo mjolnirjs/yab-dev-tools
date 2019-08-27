@@ -1,6 +1,4 @@
 {
-  "extends": [
-    "config:base",
-    ":preserveSemverRanges"
-  ]
+  "$schema": "http://json.schemastore.org/renovate",
+  "extends": ["@mjolnir"]
 }

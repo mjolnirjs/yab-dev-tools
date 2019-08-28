@@ -3,11 +3,15 @@
   "name": "yab-dev-tools-api",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build:lib": "tsc -p ./tsconfig.json",
-    "build": "npm run clean && npm run build:lib",
+    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:types",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build:es": "tsc -p ./tsconfig.es.json",
+    "build:types": "tsc -p ./tsconfig.types.json",
     "lint": "eslint --ext .ts src/ __tests__/"
   },
   "license": "MIT"

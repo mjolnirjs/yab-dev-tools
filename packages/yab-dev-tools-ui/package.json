@@ -4,11 +4,20 @@
   "version": "0.0.0",
   "scripts": {
     "clean": "rimraf dist",
-    "start": "echo 'xxx'",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ../../config/webpack/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config ../../config/webpack/webpack.config.prod.js",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
     "lint": "eslint --ext .ts src/ __tests__/"
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
     "yab-dev-tools-api": "^0.0.0"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }

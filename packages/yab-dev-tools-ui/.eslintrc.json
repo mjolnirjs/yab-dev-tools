@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "@mjolnir/eslint-config/react",
+    "@mjolnir/eslint-config/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "rules": {}
+}

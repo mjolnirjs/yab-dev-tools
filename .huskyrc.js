@@ -1,6 +1,0 @@
-module.exports = {
-  $schema: 'http://json.schemastore.org/huskyrc',
-  hooks: {
-    'pre-commit': 'lint-staged'
-  }
-};

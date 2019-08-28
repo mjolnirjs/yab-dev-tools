@@ -1,0 +1,12 @@
+{
+  "extends": ["@mjolnir/eslint-config/node", "plugin:prettier/recommended"],
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["config/**/*.js", "test/**/*.js"],
+      "rules": {
+        "node/no-unpublished-require": "off"
+      }
+    }
+  ]
+}

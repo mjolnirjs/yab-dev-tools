@@ -1902,6 +1902,11 @@
     eslint-plugin-react "^7.14.3"
     eslint-plugin-react-hooks "^1.7.0"
 
+"@mjolnir/tsconfig@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@mjolnir/tsconfig/-/tsconfig-0.0.3.tgz#3a1631d4ab80374f1bf863cb6dd6a73118c0df9c"
+  integrity sha512-FWkqC28pOpu0IMuCRjkPhXnoR506V/JUFQgl9DmwvurvQUDllj/NYJfs9/Z7YEjgbj1+ktmQHVaE2TSHm4K+rA==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

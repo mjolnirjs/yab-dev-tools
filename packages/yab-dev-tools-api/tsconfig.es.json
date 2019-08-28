@@ -5,8 +5,7 @@
     "module": "esnext",
     "outDir": "dist/es",
     "declaration": true,
-    "declarationDir": "dist/types",
-    "sourceMap": false
+    "declarationDir": "dist/types"
   },
   "include": [
     "src"

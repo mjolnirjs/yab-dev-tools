@@ -47,7 +47,8 @@ const developmentConfig = merge(baseConfig, {
         use: [
           'style-loader',
           {
-            loader: {
+            loader: 'css-loader',
+            options: {
               sourceMap: true,
             },
           },
@@ -83,11 +84,20 @@ const developmentConfig = merge(baseConfig, {
         include: /node_modules/,
         use: [
           'style-loader',
-          'css-loader',
-          'postcss-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
           {
             loader: 'less-loader',
-            options: { javascriptEnabled: true },
+            options: {
+              sourceMap: true,
+              javascriptEnabled: true,
+            },
           },
         ],
       },

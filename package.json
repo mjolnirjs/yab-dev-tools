@@ -4,7 +4,9 @@
   "description": "Yab dev tools",
   "repository": "https://github.com/mjolnirjs/yab-dev-tools.git",
   "scripts": {
+    "bootstrapt": "lerna clean && lerna bootstrapt",
     "start": "jest --watch",
+    "start:ui": "lerna run start --scope yab-dev-tools-ui",
     "clean": "lerna run clean --parallel",
     "changelog": "lerna-changelog",
     "build": "lerna run build",
@@ -14,7 +16,6 @@
   },
   "devDependencies": {
     "@mjolnir/eslint-config": "^0.1.1",
-    "@mjolnir/renovate-config": "^0.0.1",
     "@mjolnir/tsconfig": "^0.0.2",
     "@types/jest": "^24.0.17",
     "@types/node": "^12.7.1",

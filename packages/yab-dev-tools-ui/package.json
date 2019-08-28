@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "clean": "rimraf dist",
-    "build:lib": "tsc -p ./tsconfig.json",
-    "build": "npm run clean && npm run build:lib",
+    "start": "echo 'xxx'",
     "lint": "eslint --ext .ts src/ __tests__/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "yab-dev-tools-api": "^0.0.0"
+  }
 }

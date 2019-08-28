@@ -5,10 +5,10 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ../../config/webpack/webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config ../../config/webpack/webpack.config.prod.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ../../config/webpack/webpack.config.prod.js",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "lint": "eslint --ext .ts src/ __tests__/"
+    "lint": "eslint --ext .ts,.tsx src/ __tests__/"
   },
   "license": "MIT",
   "devDependencies": {

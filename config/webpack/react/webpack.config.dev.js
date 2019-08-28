@@ -11,6 +11,7 @@ const developmentConfig = merge(baseConfig, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   devServer: {
+    open: true,
     disableHostCheck: true,
     historyApiFallback: true,
     hot: true,

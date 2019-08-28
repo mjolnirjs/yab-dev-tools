@@ -1,10 +1,11 @@
 'use strict';
+const path = require('path');
 
 const rootPath = process.cwd();
 
 module.exports = {
   rootPath,
-  srcPath: `${rootPath}/src`,
-  distPath: `${rootPath}/dist`,
-  publicPath: `${rootPath}/public`
+  srcPath: path.resolve(rootPath, 'src'),
+  distPath: path.resolve(rootPath, 'dist'),
+  publicPath: path.resolve(rootPath, 'public'),
 };

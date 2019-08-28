@@ -22,12 +22,12 @@ const developmentConfig = merge(baseConfig, {
     stats: {
       children: false,
       colors: true,
-      modules: false
+      modules: false,
     },
     staticOptions: {
       cacheControl: true,
-      maxAge: 1000 * 60 * 60 * 24 * 365
-    }
+      maxAge: 1000 * 60 * 60 * 24 * 365,
+    },
   },
   module: {
     rules: [
@@ -39,14 +39,14 @@ const developmentConfig = merge(baseConfig, {
           {
             loader: 'eslint-loader',
             options: {
-              quiet: true
-            }
-          }
-        ]
+              quiet: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.less?$/,
@@ -59,19 +59,19 @@ const developmentConfig = merge(baseConfig, {
               sourceMap: true,
               importLoaders: 2,
               modules: {
-                localIdentName: '[name]__[local]___[hash:base64:5]'
-              }
-            }
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+              },
+            },
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
           {
             loader: 'less-loader',
             options: {
               sourceMap: true,
-              javascriptEnabled: true
-            }
-          }
-        ]
+              javascriptEnabled: true,
+            },
+          },
+        ],
       },
       {
         test: /\.less$/,
@@ -82,18 +82,18 @@ const developmentConfig = merge(baseConfig, {
           'postcss-loader',
           {
             loader: 'less-loader',
-            options: { javascriptEnabled: true }
-          }
-        ]
-      }
-    ]
+            options: { javascriptEnabled: true },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new FriendlyErrorsWebpackPlugin()
+    new FriendlyErrorsWebpackPlugin(),
     // new ForkTsCheckerWebpackPlugin(),
     // new ForkTsCheckerNotifierWebpackPlugin({ excludeWarnings: true }),
-  ]
+  ],
 });
 
 module.exports = developmentConfig;

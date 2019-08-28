@@ -16,7 +16,7 @@ const productionConfig = merge(baseConfig, {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.less$/,
@@ -28,18 +28,18 @@ const productionConfig = merge(baseConfig, {
             options: {
               importLoaders: 2,
               modules: {
-                localIdentName: '[local]___[hash:base64:5]'
-              }
-            }
+                localIdentName: '[local]___[hash:base64:5]',
+              },
+            },
           },
           'postcss-loader',
           {
             loader: 'less-loader',
             options: {
-              javascriptEnabled: true
-            }
-          }
-        ]
+              javascriptEnabled: true,
+            },
+          },
+        ],
       },
       {
         test: /\.less$/,
@@ -50,25 +50,25 @@ const productionConfig = merge(baseConfig, {
           'postcss-loader',
           {
             loader: 'less-loader',
-            options: { javascriptEnabled: true }
-          }
-        ]
-      }
-    ]
+            options: { javascriptEnabled: true },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.HashedModuleIdsPlugin(),
     new MiniCssExtractPlugin({
       filename: `[name].[contenthash:8].css`,
-      chunkFilename: `[name].[contenthash:8].chunk.css`
-    })
+      chunkFilename: `[name].[contenthash:8].chunk.css`,
+    }),
   ],
   optimization: {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           parse: {
-            ecma: 8
+            ecma: 8,
           },
           compress: {
             ecma: 5,
@@ -102,24 +102,24 @@ const productionConfig = merge(baseConfig, {
             // required features to drop conditional branches
             conditionals: true,
             dead_code: true,
-            evaluate: true
+            evaluate: true,
           },
           mangle: {
-            safari10: true
+            safari10: true,
           },
           output: {
             ecma: 5,
             comments: false,
-            ascii_only: true
-          }
+            ascii_only: true,
+          },
         },
         sourceMap: false,
         cache: true,
-        parallel: true
+        parallel: true,
       }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
-  }
+      new OptimizeCSSAssetsPlugin({}),
+    ],
+  },
 });
 
 module.exports = productionConfig;

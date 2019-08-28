@@ -11,8 +11,6 @@ const developmentConfig = merge(baseConfig, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    open: true,
-    port: 8080,
     disableHostCheck: true,
     historyApiFallback: true,
     hot: true,
@@ -46,7 +44,14 @@ const developmentConfig = merge(baseConfig, {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader',
+          {
+            loader: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.less?$/,

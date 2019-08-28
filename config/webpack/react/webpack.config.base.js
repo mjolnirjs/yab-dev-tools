@@ -5,7 +5,7 @@ const WebpackBar = require('webpackbar');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const env = require('../env');
+const env = require('../../env');
 
 module.exports = {
   context: env.rootPath,

@@ -4,8 +4,11 @@
   "compilerOptions": {
     "module": "esnext",
     "outDir": "dist/es",
-    "declaration": false,
+    "declaration": true,
+    "declarationDir": "dist/types",
     "sourceMap": false
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

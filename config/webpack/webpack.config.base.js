@@ -18,7 +18,6 @@ module.exports = {
     publicPath: '/',
     chunkFilename: '[name].[hash:8].chunk.js',
   },
-  externals: {},
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.less', '.json'],
     alias: {

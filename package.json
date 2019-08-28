@@ -4,7 +4,7 @@
   "description": "Yab dev tools",
   "repository": "https://github.com/mjolnirjs/yab-dev-tools.git",
   "scripts": {
-    "bootstrapt": "lerna clean && lerna bootstrapt",
+    "bootstrap": "lerna bootstrap",
     "start": "jest --watch",
     "start:ui": "lerna run start --scope yab-dev-tools-ui",
     "clean": "lerna run clean --parallel",

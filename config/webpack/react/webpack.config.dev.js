@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
+const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 
 const baseConfig = require('./webpack.config.base');
 
@@ -56,7 +57,7 @@ const developmentConfig = merge(baseConfig, {
         ],
       },
       {
-        test: /\.less?$/,
+        test: /\.less$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
@@ -105,6 +106,9 @@ const developmentConfig = merge(baseConfig, {
     ],
   },
   plugins: [
+    new TypedCssModulesPlugin({
+      globPattern: 'src/**/*.less',
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin(),

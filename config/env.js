@@ -9,5 +9,5 @@ module.exports = {
   srcPath: path.resolve('src'),
   distPath: path.resolve('dist'),
   publicPath: path.resolve('public'),
-  libraryName: process.env.LIBRARY_NAME || pkg.name,
+  libraryName: pkg.name,
 };

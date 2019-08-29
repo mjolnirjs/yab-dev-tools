@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json.schemastore.org/package",
   "name": "yab-dev-tools-ui",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "clean": "rimraf dist/",

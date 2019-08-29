@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json.schemastore.org/package",
   "name": "yab-dev-tools-api",
   "version": "0.0.0",
   "description": "",

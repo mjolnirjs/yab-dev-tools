@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json.schemastore.org/package",
   "name": "yab-dev-tools",
   "description": "Yab dev tools",
   "repository": "https://github.com/mjolnirjs/yab-dev-tools.git",

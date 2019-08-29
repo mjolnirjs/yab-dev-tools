@@ -107,7 +107,7 @@ const developmentConfig = merge(baseConfig, {
   },
   plugins: [
     new TypedCssModulesPlugin({
-      globPattern: 'src/**/*.less',
+      globPattern: 'src/**/*.?(less|css)',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsWebpackPlugin(),

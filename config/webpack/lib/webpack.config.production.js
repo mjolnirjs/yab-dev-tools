@@ -1,7 +1,6 @@
 'use strict';
 const path = require('path');
 const merge = require('webpack-merge');
-const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const baseConfig = require('./webpack.config.base');
@@ -15,13 +14,6 @@ const productionConfig = merge(baseConfig, {
     library: env.libraryName,
     libraryTarget: 'umd',
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'production'),
-      },
-    }),
-  ],
   optimization: {
     minimizer: [new TerserPlugin()],
   },

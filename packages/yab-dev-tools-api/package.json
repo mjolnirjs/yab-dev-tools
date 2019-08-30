@@ -1,17 +1,21 @@
 {
-  "$schema": "http://json.schemastore.org/package",
   "name": "yab-dev-tools-api",
   "version": "0.0.0",
   "description": "",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/es/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
+  "unpkg": "dist/umd/yab-dev-tools-api.production.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:types",
+    "build": "npm run clean && run-p build:*",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "build:es": "tsc -p ./tsconfig.es.json",
-    "build:types": "tsc -p ./tsconfig.types.json",
+    "build:umd": "cross-env NODE_ENV=production webpack --config ../../config/webpack/lib/webpack.config.development.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack --config ../../config/webpack/lib/webpack.config.production.js",
     "lint": "eslint --ext .ts src/ __tests__/"
   },
   "license": "MIT"

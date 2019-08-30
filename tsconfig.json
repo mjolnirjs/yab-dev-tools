@@ -1,10 +1,6 @@
 {
-  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "@mjolnir/tsconfig",
   "compilerOptions": {
-    "module": "es6",
-    "target": "es5",
-    "lib": ["esnext", "dom"],
-    "esModuleInterop": true,
-    "moduleResolution": "node"
+    "target": "es5"
   }
 }

@@ -1,11 +1,14 @@
 {
-  "$schema": "http://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist/lib",
-    "declaration": false,
-    "sourceMap": false,
-    "jsx": "react"
-  }
+    "module": "esnext",
+    "jsx": "react",
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  },
+  "include": [
+    "src"
+  ]
 }

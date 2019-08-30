@@ -2,8 +2,9 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-// const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
+const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 
 const baseConfig = require('./webpack.config.base');
 
@@ -12,7 +13,6 @@ const developmentConfig = merge(baseConfig, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     open: true,
-    port: 8080,
     disableHostCheck: true,
     historyApiFallback: true,
     hot: true,
@@ -22,12 +22,12 @@ const developmentConfig = merge(baseConfig, {
     stats: {
       children: false,
       colors: true,
-      modules: false
+      modules: false,
     },
     staticOptions: {
       cacheControl: true,
-      maxAge: 1000 * 60 * 60 * 24 * 365
-    }
+      maxAge: 1000 * 60 * 60 * 24 * 365,
+    },
   },
   module: {
     rules: [
@@ -39,17 +39,25 @@ const developmentConfig = merge(baseConfig, {
           {
             loader: 'eslint-loader',
             options: {
-              quiet: true
-            }
-          }
-        ]
+              quiet: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
-        test: /\.less?$/,
+        test: /\.less$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
@@ -59,41 +67,53 @@ const developmentConfig = merge(baseConfig, {
               sourceMap: true,
               importLoaders: 2,
               modules: {
-                localIdentName: '[name]__[local]___[hash:base64:5]'
-              }
-            }
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+              },
+            },
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
           {
             loader: 'less-loader',
             options: {
               sourceMap: true,
-              javascriptEnabled: true
-            }
-          }
-        ]
+              javascriptEnabled: true,
+            },
+          },
+        ],
       },
       {
         test: /\.less$/,
         include: /node_modules/,
         use: [
           'style-loader',
-          'css-loader',
-          'postcss-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 2,
+            },
+          },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
           {
             loader: 'less-loader',
-            options: { javascriptEnabled: true }
-          }
-        ]
-      }
-    ]
+            options: {
+              sourceMap: true,
+              javascriptEnabled: true,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
+    new TypedCssModulesPlugin({
+      globPattern: 'src/**/*.?(less|css)',
+    }),
     new webpack.HotModuleReplacementPlugin(),
-    new FriendlyErrorsWebpackPlugin()
-    // new ForkTsCheckerWebpackPlugin(),
-    // new ForkTsCheckerNotifierWebpackPlugin({ excludeWarnings: true }),
-  ]
+    new FriendlyErrorsWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerNotifierWebpackPlugin({ excludeWarnings: true }),
+  ],
 });
 
 module.exports = developmentConfig;

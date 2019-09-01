@@ -8,7 +8,7 @@
     "clean": "yarn workspaces run clean",
     "changelog": "lerna-changelog",
     "build": "yarn workspaces run build",
-    "lint": "eslint ./",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "test": "jest",
     "release": "npm run test && npm run build && lerna publish"
   },

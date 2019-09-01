@@ -1,2 +1,9 @@
+# by default, dotfile will ignored by eslint
+# we unignore them to be linted
+!/.*
+
+# build assets should not lint
 dist/
+
+# generated style d.ts
 **/*.less.d.ts

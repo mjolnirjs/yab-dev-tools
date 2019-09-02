@@ -2106,10 +2106,10 @@
     eslint-plugin-react "^7.14.3"
     eslint-plugin-react-hooks "^2.0.0"
 
-"@mjolnir/prettier-config@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@mjolnir/prettier-config/-/prettier-config-0.1.0.tgz#70a033d99ccde742f167e639b65295ffcada6d2a"
-  integrity sha512-vasJfwOUou0GBTqH4I36XptPfNbVqDxsuC89+2fJrGqps1nFGfPHSks8bXRnonh1is4zlWMNF402pNxIvJBI6g==
+"@mjolnir/prettier-config@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mjolnir/prettier-config/-/prettier-config-0.2.0.tgz#79cf32e19eee13fde28d44104b084f69aa0da59c"
+  integrity sha512-yS0bUrDWgyRsRZijdSv36VEKi1VQi7oVbk8IdicD3+465Y4W3CJ0FMi2IOCYqNSst6cGFAgtMd/lkTQITALULA==
 
 "@mjolnir/tsconfig@^0.0.3":
   version "0.0.3"

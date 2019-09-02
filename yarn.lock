@@ -1990,10 +1990,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.4.0.tgz#93d0d78ba0520d162796bb94156b399bd26e9394"
   integrity sha512-idIFyiYzVr3kNOGtIZzx2n9V0iJdTn06hYmJ05miktP4bHdrTJeonp/6wfLtDxfsfx00mkCxxX0YymvnrqozeA==
 
-"@mjolnir/babel-preset@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@mjolnir/babel-preset/-/babel-preset-0.0.2.tgz#8823f59887a8ad1952d283d9cac3876bee6bf123"
-  integrity sha512-XfqmifG+2g22MSfQkn680QsyfP+i91HcWMR0HKdBKnb4vS1duPSRENnCAwoCjdqynpXJV6iM93z0kuZCgISXxw==
+"@mjolnir/babel-preset@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mjolnir/babel-preset/-/babel-preset-0.2.0.tgz#6dd00c7fd090390ffdfa14d1dbdc2dacb0138a24"
+  integrity sha512-xXsJNwTy9SJ78/YF8YITIQyI1xsak5igLPcoRQchigv1ru98Hm7b7hauRu6WnCvDJFINGw59+6sR6/i/fq2O7A==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.5.5"

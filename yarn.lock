@@ -2111,10 +2111,10 @@
   resolved "https://registry.yarnpkg.com/@mjolnir/prettier-config/-/prettier-config-0.2.0.tgz#79cf32e19eee13fde28d44104b084f69aa0da59c"
   integrity sha512-yS0bUrDWgyRsRZijdSv36VEKi1VQi7oVbk8IdicD3+465Y4W3CJ0FMi2IOCYqNSst6cGFAgtMd/lkTQITALULA==
 
-"@mjolnir/tsconfig@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@mjolnir/tsconfig/-/tsconfig-0.0.3.tgz#3a1631d4ab80374f1bf863cb6dd6a73118c0df9c"
-  integrity sha512-FWkqC28pOpu0IMuCRjkPhXnoR506V/JUFQgl9DmwvurvQUDllj/NYJfs9/Z7YEjgbj1+ktmQHVaE2TSHm4K+rA==
+"@mjolnir/tsconfig@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@mjolnir/tsconfig/-/tsconfig-0.1.0.tgz#a2ccc60dd29aabad78a54773a82e912bae1133ef"
+  integrity sha512-xgwr5rrVYSFlwDJcTF/nJegmLY8ZAxp37+7THneELu4NrM0N9chRdYgJbrNFjC9aj4sva0zPkNZrqruGlgwU6g==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

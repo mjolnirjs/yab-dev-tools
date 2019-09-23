@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@mjolnir/babel-preset": "^0.2.0",
     "@mjolnir/eslint-config": "^0.4.0",
     "@mjolnir/prettier-config": "^0.2.0",

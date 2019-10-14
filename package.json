@@ -52,7 +52,7 @@
     "terser-webpack-plugin": "^1.4.1",
     "ts-jest": "^24.1.0",
     "typed-css-modules-webpack-plugin": "^0.1.2",
-    "typescript": "^3.6.3",
+    "typescript": "^3.6.4",
     "url-loader": "^2.1.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",

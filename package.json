@@ -48,7 +48,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "style-loader": "^1.0.0",
+    "style-loader": "^1.1.2",
     "terser-webpack-plugin": "^1.4.1",
     "ts-jest": "^24.1.0",
     "typed-css-modules-webpack-plugin": "^0.1.2",

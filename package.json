@@ -23,7 +23,7 @@
     "@types/jest": "^24.9.0",
     "@types/node": "^12.12.24",
     "babel-loader": "^8.0.6",
-    "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^5.2.1",
     "css-loader": "^3.4.2",

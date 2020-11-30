@@ -21,7 +21,7 @@
     "@mjolnir/prettier-config": "^0.2.0",
     "@mjolnir/tsconfig": "^0.1.0",
     "@types/jest": "^24.9.1",
-    "@types/node": "^12.19.4",
+    "@types/node": "^12.19.7",
     "babel-loader": "^8.2.2",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^5.1.2",

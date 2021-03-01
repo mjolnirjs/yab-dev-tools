@@ -13,7 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^16.14.4",
-    "@types/react-dom": "^16.9.10",
+    "@types/react-dom": "^16.9.11",
     "yab-dev-tools-api": "^0.0.0"
   },
   "dependencies": {

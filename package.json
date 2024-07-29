@@ -49,7 +49,7 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "style-loader": "^1.3.0",
-    "terser-webpack-plugin": "^1.4.5",
+    "terser-webpack-plugin": "^1.4.6",
     "ts-jest": "^24.3.0",
     "typed-css-modules-webpack-plugin": "^0.2.0",
     "typescript": "^3.9.10",
